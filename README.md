@@ -1,7 +1,7 @@
 # Keyboard mappings for use with Karabiner
 
-These are some keyboard mappings which I made for use with (Karabiner)
-[https://pqrs.org/osx/karabiner/].
+These are some keyboard mappings which I made for use with [Karabiner]
+(https://pqrs.org/osx/karabiner/).
 
 A description of each file follows below.
 
