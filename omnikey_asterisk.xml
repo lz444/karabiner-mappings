@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<root>
+	<item>
+		<name>Northgate OmniKey style extra Asterisk ( * ) key</name>
+		<item>
+			<name>PC Application Key ( &#x27e6;&#x2630;&#x27e7; ) to Asterisk</name>
+			<identifier>private.AppAsterisk</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::PC_APPLICATION,
+				KeyCode::KEYPAD_MULTIPLY
+			</autogen>
+		</item>
+		<item>
+			<name>Press &amp; release Right Option for Asterisk</name>
+			<identifier>private.ROptAsterisk</identifier>
+			<autogen>
+				__KeyOverlaidModifier__
+				KeyCode::OPTION_R,
+				KeyCode::OPTION_R,
+				KeyCode::KEYPAD_MULTIPLY
+			</autogen>
+		</item>
+		<item>
+			<name>Press &amp; release Right Command for Asterisk</name>
+			<identifier>private.RCmdAsterisk</identifier>
+			<autogen>
+				__KeyOverlaidModifier__
+				KeyCode::COMMAND_R,
+				KeyCode::COMMAND_R,
+				KeyCode::KEYPAD_MULTIPLY
+			</autogen>
+		</item>
+		<item>
+			<name>Press Right Option &amp; Right Command simultaneously for Asterisk</name>
+			<identifier>private.SimulROptRCmdAsterisk</identifier>
+			<autogen>
+				__SimultaneousKeyPresses__
+				KeyCode::OPTION_R,
+				KeyCode::COMMAND_R,
+				KeyCode::KEYPAD_MULTIPLY
+			</autogen>
+		</item>
+		<item>
+			<name>Press Right Option &amp; Right Shift simultaneously for Asterisk</name>
+			<identifier>private.SimulROptRShiftAsterisk</identifier>
+			<autogen>
+				__SimultaneousKeyPresses__
+				KeyCode::OPTION_R,
+				KeyCode::SHIFT_R,
+				KeyCode::KEYPAD_MULTIPLY
+			</autogen>
+		</item>
+	</item>
+</root>

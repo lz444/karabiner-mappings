@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<root>
+	<item>
+		<name>&#x1f522;&#x2728; Enhanced Numeric Keypad</name>
+		<appendix>You can type brackets, symbols, and hexadecimal with Shift, Option, or Shift+Option and number pad keys.</appendix>
+		<appendix>NOTE: Shift+Dot for comma and Clear as Delete are already provided,</appendix>
+		<appendix>so they are not repeated here.</appendix>
+		<item>
+			<name>Forbid Shift + F13</name>
+			<appendix>For buggy PS/2&#x2013;USB converter &#x1f61e;</appendix>
+			<appendix>Pressing LShift + Keypad Slash with this converter continually generates</appendix>
+			<appendix>Shift + F13 codes while you keep the LShift held down, even after letting</appendix>
+			<appendix>up on the Keypad Slash key.</appendix>
+			<identifier>private.ForbidShiftF13</identifier>
+			<autogen>
+				__DropKeyAfterRemap__
+				KeyCode::F13, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT
+			</autogen>
+		</item>
+		<!-- These must appear first for Option + Shift to take precedence -->
+		<item>
+			<name>Option + Keypad Dot, 0-6 for Hexadecimal entry</name>
+			<appendix>&#x27e6;1-6&#x27e7;: a-f    &#x27e6;0&#x27e7;: x    &#x27e6;.&#x27e7;: h</appendix>
+			<appendix>Can use with Shift or Caps Lock for captial letters</appendix>
+			<identifier>private.OptionKPHex</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_DOT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,
+				KeyCode::H
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_0, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,
+				KeyCode::X
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_1, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,
+				KeyCode::A
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_2, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,
+				KeyCode::B
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_3, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,
+				KeyCode::C
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_4, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,
+				KeyCode::D
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_5, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,
+				KeyCode::E
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_6, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,
+				KeyCode::F
+			</autogen>
+		</item>
+		<item>
+			<name>Option + Keypad Plus for Tab ( &#x21e5; )</name>
+			<appendix>Can also use Shift + Option + Keypad Plus for Shift + Tab ( &#x21e4; )</appendix>
+			<identifier>private.OptionKPPlusTab</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_PLUS, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,
+				KeyCode::TAB
+			</autogen>
+		</item>
+
+		<!-- These can appear in any order due to the use of ModifierFlag::NONE -->
+		<item>
+			<name>Shift + Clear for Forward Delete ( &#x2326; )</name>
+			<identifier>private.ShiftClearFDel</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_CLEAR, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::FORWARD_DELETE
+			</autogen>
+		</item>
+		<item>
+			<name>Shift + Keypad Slash, Multiply for Parens ( () )</name>
+			<identifier>private.ShiftKPParens</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_SLASH, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::9, ModifierFlag::SHIFT_L
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_MULTIPLY, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::0, ModifierFlag::SHIFT_L
+			</autogen>
+		</item>
+		<item>
+			<name>Shift + Keypad 8, 9 for Square Brackets ( [] )</name>
+			<identifier>private.ShiftKPSqBrackets</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_8, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::BRACKET_LEFT
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_9, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::BRACKET_RIGHT
+			</autogen>
+		</item>
+		<item>
+			<name>Shift + Keypad 5, 6, for Curly Brackets ( {} )</name>
+			<identifier>private.ShiftKPCuBrackets</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_5, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_6, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L
+			</autogen>
+		</item>
+		<item>
+			<name>Shift + Keypad 2, 3, for Angle Brackets ( &lt;&gt; )</name>
+			<identifier>private.ShiftKPAnBrackets</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_2, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::COMMA, ModifierFlag::SHIFT_L
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_3, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::DOT, ModifierFlag::SHIFT_L
+			</autogen>
+		</item>
+		<item>
+			<name>Shift + Keypad Minus for Colon ( : )</name>
+			<identifier>private.ShiftKPMinusColon</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_MINUS, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::SEMICOLON, ModifierFlag::SHIFT_L
+			</autogen>
+		</item>
+		<item>
+			<name>Shift + Keypad Plus for Equal ( = )</name>
+			<identifier>private.ShiftKPPlusEqual</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_PLUS, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::EQUAL
+			</autogen>
+		</item>
+		<item>
+			<name>Shift + Keypad Zero for Hash ( # )</name>
+			<identifier>private.ShiftKP0Hash</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_0, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::3, ModifierFlag::SHIFT_L
+			</autogen>
+		</item>
+		<item>
+			<name>Shift + Keypad One for Exclamation Point ( ! )</name>
+			<identifier>private.ShiftKP1Bang</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_1, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::1, ModifierFlag::SHIFT_L
+			</autogen>
+		</item>
+		<item>
+			<name>Shift + Keypad Four for Dollar ( $ )</name>
+			<identifier>private.ShiftKP4Dollar</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_4, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::4, ModifierFlag::SHIFT_L
+			</autogen>
+		</item>
+		<item>
+			<name>Shift + Keypad Seven for Caret ( ^ )</name>
+			<identifier>private.ShiftKP7Caret</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_7, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::6, ModifierFlag::SHIFT_L
+			</autogen>
+		</item>
+		<item>
+			<name>Shift + Option + Keypad 7 for Backquote ( ` )</name>
+			<identifier>private.ShiftOptionKP7BQ</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_7, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION | MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::BACKQUOTE
+			</autogen>
+		</item>
+		<item>
+			<name>Shift + Option + Keypad 8 for Double Quote ( &quot; )</name>
+			<identifier>private.ShiftOptionKP8DQuote</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_8, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION | MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::QUOTE, ModifierFlag::SHIFT_L
+			</autogen>
+		</item>
+		<item>
+			<name>Shift + Option + Keypad 9 for At-sign ( @ )</name>
+			<identifier>private.ShiftOptionKP9At</name>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_9, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION | MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::2, ModifierFlag::SHIFT_L
+			</autogen>
+		</item>
+		<item>
+			<name>Shift + Option + Keypad Slash for Backslash ( \ )</name>
+			<identifier>private.ShiftOptionKPSlashBackslash</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_SLASH, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION | MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::BACKSLASH
+			</autogen>
+		</item>
+		<item>
+			<name>Shift + Option + Keypad Multiply for Question Mark ( ? )</name>
+			<identifier>private.ShiftOptionKPQuestion</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_MULTIPLY, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION | MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::SLASH, ModifierFlag::SHIFT_L
+			</autogen>
+		</item>
+		<item>
+			<name>Shift + Option + Keypad Minus for Underscore ( _ )</name>
+			<identifier>private.ShiftOptionKPMinusUnderscore</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_MINUS, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION | MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | ModifierFlag::NONE,
+				KeyCode::MINUS, ModifierFlag::SHIFT_L
+			</autogen>
+		</item>
+		<item>
+			<name>Option + Keypad 7 for Tilde ( ~ )</name>
+			<identifier>private.OptionKP7Tilde</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_7, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION | ModifierFlag::NONE,
+				KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L
+			</autogen>
+		</item>
+		<item>
+			<name>Option + Keypad 8 for Single Quote ( &apos; )</name>
+			<identifier>private.OptionKP8Tick</name>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_8, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION | ModifierFlag::NONE,
+				KeyCode::QUOTE
+			</autogen>
+		</item>
+		<item>
+			<name>Option + Keypad 9 for Percent ( % )</name>
+			<identifier>private.OptionKP9Percent</name>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_9, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION | ModifierFlag::NONE,
+				KeyCode::5, ModifierFlag::SHIFT_L
+			</autogen>
+		</item>
+		<item>
+			<name>Option + Keypad Slash for Vertical Bar ( | )</name>
+			<identifier>private.OptionKPSlashPipe</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_SLASH, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION | ModifierFlag::NONE,
+				KeyCode::BACKSLASH, ModifierFlag::SHIFT_L
+			</autogen>
+		</item>
+		<item>
+			<name>Option + Keypad Multiply for Ampersand ( &amp; )</name>
+			<identifier>private.OptionKPMultAmpersand</name>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_MULTIPLY, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION | ModifierFlag::NONE,
+				KeyCode::7, ModifierFlag::SHIFT_L
+			</autogen>
+		</item>
+		<item>
+			<name>Option + Keypad Minus for Semicolon ( ; )</name>
+			<identifier>private.OptionKPMinusSemicolon</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_MINUS, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION | ModifierFlag::NONE,
+				KeyCode::SEMICOLON
+			</autogen>
+		</item>
+	</item>
+</root>

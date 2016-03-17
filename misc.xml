@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<root>
+	<item>
+		<name>Miscellaneous settings</name>
+		<item>
+			<name>Application Key to Back, Right Control + Application to Forward</name>
+			<identifier>private.AppBackFwd</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::PC_APPLICATION, ModifierFlag::CONTROL_R | ModifierFlag::NONE,
+				KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_R
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				KeyCode::PC_APPLICATION, ModifierFlag::NONE,
+				KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_R
+			</autogen>
+		</item>
+		<item>
+			<name>Change minus ( - ) to underscore ( _ ) when Caps Lock is on</name>
+			<appendix>For users who have Shift to turn off Caps Lock, this lets you type</appendix>
+			<appendix>ALLCAPS_IDENTIFIERS_WITH_UNDERSCORES</appendix>
+			<appendix>while leaving the Caps Lock on.</appendix>
+			<appendix>An unusual side effect: Typing the underscore will cause the Caps Lock light to switch off,</appendix>
+			<appendix>but typing another letter will turn the Caps Lock light back on.</appendix>
+			<identifier>private.UnderscoreCapsLock</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::MINUS, ModifierFlag::CAPSLOCK | ModifierFlag::NONE,
+				KeyCode::MINUS, ModifierFlag::SHIFT_L
+			</autogen>
+		</item>
+	</item>
+</root>

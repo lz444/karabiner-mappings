@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<root>
+	<vkopenurldef>
+		<name>KeyCode::VK_OPEN_URL_APP_Firefox</name>
+		<url type="file">/Applications/Firefox.app</url>
+	</vkopenurldef>
+	<vkopenurldef>
+		<name>KeyCode::VK_OPEN_URL_APP_Thunderbird</name>
+		<url type="file">/Applications/Thunderbird.app</url>
+	</vkopenurldef>
+	<vkopenurldef>
+		<name>KeyCode::VK_OPEN_URL_APP_Vim</name>
+		<url type="file">/Applications/MacVim.app</url>
+	</vkopenurldef>
+
+	<item>
+		<name>&#x1f522;&#x1f310; Left Ctrl + Numeric Keypad as Application Hotkeys</name>
+		<item>
+			<name>Left Ctrl + Keypad 0 to open Terminal</name>
+			<identifier>private.LCtrlKP0Terminal</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_0, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+				KeyCode::VK_OPEN_URL_APP_Terminal
+			</autogen>
+		</item>
+		<item>
+			<name>Left Ctrl + Keypad Dot (.) to open Vim</name>
+			<identifier>private.LCtrlKPDotVim</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_DOT, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+				KeyCode::VK_OPEN_URL_APP_Vim
+			</autogen>
+		</item>
+		<item>
+			<name>Left Ctrl + Keypad * to open System Preferences</name>
+			<identifier>private.LCtrlKPStarPrefs</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_MULTIPLY, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+				KeyCode::VK_OPEN_URL_APP_System_Preferences
+			</autogen>
+		</item>
+		<item>
+			<name>Left Ctrl + Keypad / to open Launchpad</name>
+			<identifier>private.LCtrlKPSlashLaunchpad</name>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_SLASH, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+				KeyCode::LAUNCHPAD
+			</autogen>
+		</item>
+		<item>
+			<name>Left Ctrl + Keypad 7 to open Home directory</name>
+			<identifier>private.LCtrlKP7Home</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_7, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+				KeyCode::VK_OPEN_URL_FILE_Home
+			</autogen>
+		</item>
+		<item>
+			<name>Left Ctrl + Keypad 9 to open Finder</name>
+			<identifier>private.LCtrlKP9Finder</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_9, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+				KeyCode::VK_OPEN_URL_APP_Finder
+			</autogen>
+		</item>
+		<item>
+			<name>Left Ctrl + Keypad 1 to open Thunderbird</name>
+			<identifier>private.LCtrlKP1Thunderbird</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_1, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+				KeyCode::VK_OPEN_URL_APP_Thunderbird
+			</autogen>
+		</item>
+		<item>
+			<name>Left Ctrl + Keypad 2 to open Firefox</name>
+			<identifier>private.LCtrlKP2Firefox</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEYPAD_2, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+				KeyCode::VK_OPEN_URL_APP_Firefox
+			</autogen>
+		</item>
+	</item>
+</root>
