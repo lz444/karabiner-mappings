@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<root>
+	<item>
+		<name>Remap Insert (Help) key</name>
+		<appendix>Intended for use with the Leopold FC660, but can also be used with other keyboards.</appendix>
+		<item>
+			<name>Insert to Backquote ( ` )</name>
+			<appendix>Shift + Insert will generate Tilde ( ~ )</appendix>
+			<identifier>private.InsertBackquote</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::HELP,
+				KeyCode::BACKQUOTE
+			</autogen>
+		</item>
+		<item>
+			<name>Insert for Tilde ( ~ ), Shift + Insert for Backquote ( ` )</name>
+			<identifier>private.InsertBackquoteFlipped</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::HELP, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
+				KeyCode::BACKQUOTE
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				KeyCode::HELP,
+				KeyCode::BACKQUOTE, ModifierFlag::SHIFT_R
+			</autogen>
+		</item>
+		<item>
+			<name>Insert key to an EXTRA6 modifier key</name>
+			<appendix>Pressing Insert alone won't produce anything</appendix>
+			<appendix>Use Insert + other keys as hotkeys</appendix>
+			<identifier>private.InsertExtra6</private>
+			<autogen>
+				__KeyToKey__
+				KeyCode::HELP,
+				KeyCode::VK_MODIFIER_EXTRA6
+			</autogen>
+		</item>
+		<item>
+			<name>Enhanced Insert</name>
+			<appendix>Press &amp; release Insert alone for Backquote ( ` )</appendix>
+			<appendix>Holding Insert generates EXTRA6 modifier</appendix>
+			<appendix>Can use Insert + other keys as hotkeys</appendix>
+			<appendix>Holding Insert will not auto-repeat the backquote</appendix>
+			<appendix>Shift + Insert generates Tilde ( ~ ) but can't be used for hotkeys</appendix>
+			<appendix>Shift + Insert will auto-repeat the tilde</appendix>
+			<identifier>private.InsertExtra6Backquote</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::HELP, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
+				KeyCode::BACKQUOTE, ModifierFlag::SHIFT_R
+			</autogen>
+			<autogen>
+				__KeyOverlaidModifier__
+				KeyCode::HELP,
+				KeyCode::VK_MODIFIER_EXTRA6,
+				KeyCode::BACKQUOTE
+			</autogen>
+		</item>
+		<item>
+			<name>Enhanced Insert Flipped</name>
+			<appendix>Press &amp; release Insert alone for Tilde ( ~ )</appendix>
+			<appendix>Holding Insert generates EXTRA6 modifier</appendix>
+			<appendix>Can use Insert + other keys as hotkeys</appendix>
+			<appendix>Holding Insert will not auto-repeat the tilde</appendix>
+			<appendix>Shift + Insert generates Backquote ( ` ) but can't be used for hotkeys</appendix>
+			<appendix>Shift + Insert will auto-repeat the backquote</appendix>
+			<identifier>private.InsertExtra6Tilde</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::HELP, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
+				KeyCode::BACKQUOTE
+			</autogen>
+			<autogen>
+				__KeyOverlaidModifier__
+				KeyCode::HELP,
+				KeyCode::VK_MODIFIER_EXTRA6,
+				KeyCode::BACKQUOTE, ModifierFlag::SHIFT_R
+			</autogen>
+		</item>
+		<item>
+			<name>Hotkeys for use with EXTRA6 / Enhanced Insert</name>
+			<item>
+				<name>Insert + Delete (Forward Delete) for Insert</name>
+				<appendix>Just in case you need the insert key for something &#x1f60f;</appendix>
+				<identifier>private.InsertDeleteInsert</identifier>
+				<autogen>
+					__KeyToKey__
+					KeyCode::FORWARD_DELETE, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
+					KeyCode::HELP
+				</autogen>
+			</item>
+			<item>
+				<name>&#x1f3b5; Media Controls</name>
+				<item>
+					<name>Insert + Backspace, Minus, Equal to Volume controls</name>
+					<appendix>&#x27e6;-&#x27e7;: &#x1f509;    Vol Down</appendix>
+					<appendix>&#x27e6;=&#x27e7;: &#x1f50a;    Vol Up</appendix>
+					<appendix>&#x27e6;Backspace&#x27e7;: &#x1f507;    Mute</appendix>
+					<identifier>private.InsertBkspMinusEqualVolume</identifier>
+					<autogen>
+						__KeyToKey__
+						KeyCode::DELETE, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
+						ConsumerKeyCode::VOLUME_MUTE
+					</autogen>
+					<autogen>
+						__KeyToKey__
+						KeyCode::MINUS, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
+						ConsumerKeyCode::VOLUME_DOWN
+					</autogen>
+					<autogen>
+						__KeyToKey__
+						KeyCode::EQUAL, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
+						ConsumerKeyCode::VOLUME_UP
+					</autogen>
+				</item>
+				<item>
+					<name>Insert + Square Brackets, Backslash for Media playback</name>
+					<appendix>&#x27e6;[&#x27e7;: &#x25c4;&#x25c4;    Prev</appendix>
+					<appendix>&#x27e6;]&#x27e7;: &#x25ba;&#x25ba;    Next</appendix>
+					<appendix>&#x27e6;\&#x27e7;: &#x25b6;&#x2161;    Play/Pause</appendix>
+					<identifier>private.InsertSqBracketsBackslashPlayback</identifier>
+					<autogen>
+						__KeyToKey__
+						KeyCode::BRACKET_LEFT, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
+						ConsumerKeyCode::MUSIC_PREV
+					</autogen>
+					<autogen>
+						__KeyToKey__
+						KeyCode::BRACKET_RIGHT, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
+						ConsumerKeyCode::MUSIC_NEXT
+					</autogen>
+					<autogen>
+						__KeyToKey__
+						KeyCode::BACKSLASH, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
+						ConsumerKeyCode::MUSIC_PLAY
+					</autogen>
+				</item>
+			</item>
+			<item>
+				<name>&#x1f310; Application hotkeys</name>
+				<include once="true" path="enhanced_insert_apps.xml" />
+			</item>
+		</item>
+	</item>
+</root>
+

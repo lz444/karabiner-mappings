@@ -1,18 +1,6 @@
 <?xml version="1.0"?>
 <root>
-	<vkopenurldef>
-		<name>KeyCode::VK_OPEN_URL_APP_Firefox</name>
-		<url type="file">/Applications/Firefox.app</url>
-	</vkopenurldef>
-	<vkopenurldef>
-		<name>KeyCode::VK_OPEN_URL_APP_Thunderbird</name>
-		<url type="file">/Applications/Thunderbird.app</url>
-	</vkopenurldef>
-	<vkopenurldef>
-		<name>KeyCode::VK_OPEN_URL_APP_Vim</name>
-		<url type="file">/Applications/MacVim.app</url>
-	</vkopenurldef>
-
+	<include once="true" path="vk_apps.xml" />
 	<item>
 		<name>&#x1f522;&#x1f310; Left Ctrl + Numeric Keypad as Application Hotkeys</name>
 		<item>

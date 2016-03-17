@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<root>
+	<include once="true" path="vk_apps.xml" />
+	<item>
+		<name>Insert + Enter to open Launchpad</name>
+		<identifier>private.InsertEnterLaunchpad</identifier>
+		<autogen>
+			__KeyToKey__
+			KeyCode::RETURN, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
+			KeyCode::LAUNCHPAD
+		</autogen>
+	</item>
+	<item>
+		<name>Insert + Quote to open System Preferences</name>
+		<identifier>private.InsertEnterPrefs</identifier>
+		<autogen>
+			__KeyToKey__
+			KeyCode::QUOTE, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
+			KeyCode::VK_OPEN_URL_APP_System_Preferences
+		</autogen>
+	</item>
+	<item>
+		<name>Insert + Semicolon to open Misson Control</name>
+		<identifier>private.InsertSemicolonMissionControl</identifier>
+		<autogen>
+			__KeyToKey__
+			KeyCode::SEMICOLON, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
+			KeyCode::VK_OPEN_URL_APP_Mission_Control
+		</autogen>
+	</item>
+	<item>
+		<name>Insert + Zero to open Terminal</name>
+		<identifier>private.Insert0Terminal</identifier>
+		<autogen>
+			__KeyToKey__
+			KeyCode::0, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
+			KeyCode::VK_OPEN_URL_APP_Terminal
+		</autogen>
+	</item>
+	<item>
+		<name>Insert + Nine to open Vim</name>
+		<identifier>private.Insert9Vim</identifier>
+		<autogen>
+			__KeyToKey__
+			KeyCode::9, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
+			KeyCode::VK_OPEN_URL_APP_Vim
+		</autogen>
+	</item>
+	<item>
+		<name>Insert + One to open Thunderbird</name>
+		<identifier>private.Insert1Thunderbird</identifier>
+		<autogen>
+			__KeyToKey__
+			KeyCode::1, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
+			KeyCode::VK_OPEN_URL_APP_Thunderbird
+		</autogen>
+	</item>
+	<item>
+		<name>Insert + Two to open Firefox</name>
+		<identifier>private.Insert2Firefox</identifier>
+		<autogen>
+			__KeyToKey__
+			KeyCode::2, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
+			KeyCode::VK_OPEN_URL_APP_Firefox
+		</autogen>
+	</item>
+	<item>
+		<name>Insert + Three for Finder</name>
+		<identifier>private.Insert3Finder</identifier>
+		<autogen>
+			__KeyToKey__
+			KeyCode::3, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
+			KeyCode::VK_OPEN_URL_APP_Finder
+		</autogen>
+	</item>
+	<item>
+		<name>Insert + Four for Home directory</name>
+		<identifier>private.Insert4Home</identifier>
+		<autogen>
+			__KeyToKey__
+			KeyCode::4, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
+			KeyCode::VK_OPEN_URL_FILE_Home
+		</autogen>
+	</item>
+</root>

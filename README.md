@@ -5,6 +5,9 @@ These are some keyboard mappings which I made for use with [Karabiner]
 
 A description of each file follows below.
 
+###vk\_apps.xml
+Virtual Key definitions not provided by Karabiner for launching apps.
+
 ###omnikey\_asterisk.xml
 The old Northgate OmniKey keyboard had an asterisk between the right Ctrl
 and Alt keys. These are mappings to simulate the asterisk with other
@@ -25,6 +28,13 @@ A reference illustration for the enhanced numpad.
 
 ###enhanced\_numpad.pdf
 PDF version of illustration.
+
+###enhanced\_insert.xml
+Insert key is rather useless on Macs, so here are definitions to make it
+more useful. Good for Leopold FC660 users.
+
+###enhanced\_insert\_apps.xml
+Application hotkey definitions for use with enhanced\_insert.
 
 ###misc.xml
 Other mappings which don't fit anywhere else.
