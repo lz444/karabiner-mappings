@@ -47,21 +47,21 @@
 		</autogen>
 	</item>
 	<item>
-		<name>Insert + One to open Thunderbird</name>
-		<identifier>private.Insert1Thunderbird</identifier>
+		<name>Insert + One to open Firefox</name>
+		<identifier>private.Insert1Firefox</identifier>
 		<autogen>
 			__KeyToKey__
 			KeyCode::1, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
-			KeyCode::VK_OPEN_URL_APP_Thunderbird
+			KeyCode::VK_OPEN_URL_APP_Firefox
 		</autogen>
 	</item>
 	<item>
-		<name>Insert + Two to open Firefox</name>
-		<identifier>private.Insert2Firefox</identifier>
+		<name>Insert + Two to open Thunderbird</name>
+		<identifier>private.Insert2Thunderbird</identifier>
 		<autogen>
 			__KeyToKey__
 			KeyCode::2, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
-			KeyCode::VK_OPEN_URL_APP_Firefox
+			KeyCode::VK_OPEN_URL_APP_Thunderbird
 		</autogen>
 	</item>
 	<item>

@@ -58,21 +58,21 @@
 			</autogen>
 		</item>
 		<item>
-			<name>Left Ctrl + Keypad 1 to open Thunderbird</name>
-			<identifier>private.LCtrlKP1Thunderbird</identifier>
+			<name>Left Ctrl + Keypad 1 to open Firefox</name>
+			<identifier>private.LCtrlKP1Firefox</identifier>
 			<autogen>
 				__KeyToKey__
 				KeyCode::KEYPAD_1, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
-				KeyCode::VK_OPEN_URL_APP_Thunderbird
+				KeyCode::VK_OPEN_URL_APP_Firefox
 			</autogen>
 		</item>
 		<item>
-			<name>Left Ctrl + Keypad 2 to open Firefox</name>
-			<identifier>private.LCtrlKP2Firefox</identifier>
+			<name>Left Ctrl + Keypad 2 to open Thunderbird</name>
+			<identifier>private.LCtrlKP2Thunderbird</identifier>
 			<autogen>
 				__KeyToKey__
 				KeyCode::KEYPAD_2, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
-				KeyCode::VK_OPEN_URL_APP_Firefox
+				KeyCode::VK_OPEN_URL_APP_Thunderbird
 			</autogen>
 		</item>
 	</item>
