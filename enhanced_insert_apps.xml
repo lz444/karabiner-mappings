@@ -20,11 +20,11 @@
 		</autogen>
 	</item>
 	<item>
-		<name>Insert + Semicolon to open Misson Control</name>
-		<identifier>private.InsertSemicolonMissionControl</identifier>
+		<name>Insert + Up arrow to open Misson Control</name>
+		<identifier>private.InsertUpMissionControl</identifier>
 		<autogen>
 			__KeyToKey__
-			KeyCode::SEMICOLON, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
+			KeyCode::CURSOR_UP, ModifierFlag::EXTRA6 | ModifierFlag::NONE,
 			KeyCode::VK_OPEN_URL_APP_Mission_Control
 		</autogen>
 	</item>
