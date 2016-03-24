@@ -4,6 +4,18 @@
 		<name>Remap Insert (Help) key</name>
 		<appendix>Intended for use with the Leopold FC660, but can also be used with other keyboards.</appendix>
 		<item>
+			<name>Simultaneous Insert + Escape to toggle Pass Through mode</name>
+			<identifier>private.InsEscPassthrough</identifier>
+			<autogen>
+				__SimultaneousKeyPresses__
+				KeyCode::HELP, KeyCode::ESCAPE,
+				KeyCode::VK_LOCK_ALL_FORCE_OFF,
+				KeyCode::VK_CONFIG_TOGGLE_notsave_passthrough,
+				Option::NOREPEAT,
+				Option::IGNORE_PASSTHROUGH
+			</autogen>
+		</item>
+		<item>
 			<name>Insert to Backquote ( ` )</name>
 			<appendix>Shift + Insert will generate Tilde ( ~ )</appendix>
 			<identifier>private.InsertBackquote</identifier>
