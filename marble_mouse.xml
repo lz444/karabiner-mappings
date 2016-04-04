@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<root>
+	<item>
+		<name>Logitech Trackman Marble (Marble Mouse)</name>
+		<item>
+			<name>Enhanced Secondary Buttons</name>
+			<appendix>NOTE: For this section, left &amp; right buttons refer to the physical left &amp; right buttons on the mouse</appendix>
+			<appendix>Primay buttons are the two large buttons, secondary buttons are the two smaller buttons</appendix>
+			<appendix></appendix>
+			<appendix>Left Secondary &#x2192; Right Secondary means hold the left secondary button down</appendix>
+			<appendix>while pressing the right secondary button</appendix>
+			<appendix>Left Secondary &#x2190; Right Secondary means hold the right secondary button down</appendix>
+			<appendix>while pressing the left secondary button</appendix>
+			<item>
+				<name>For Left-handed users</name>
+				<appendix>Assumes you have set left-handed configuration in System Preferences</appendix>
+				<appendix>&#x2022; Press Right Secondary alone for middle click</appendix>
+				<appendix>&#x2022; Hold Right Secondary and move trackball for scrolling</appendix>
+				<appendix>&#x2022; Press Left Secondary alone for Mission Control</appendix>
+				<appendix>&#x2022; Left Secondary &#x2192; Right Secondary for Forward</appendix>
+				<appendix>&#x2022; Left Secondary &#x2190; Right Secondary for Backward</appendix>
+				<appendix>&#x2022; Left Secondary &#x2192; Right Primary for Next Tab</appendix>
+				<appendix>&#x2022; Left Primary &#x2190; Right Secondary for Previous Tab</appendix>
+				<identifier>private.MMEnhancedSecondariesLefty</identifier>
+				<block>
+					<modifier_not>ModifierFlag::EXTRA4</modifier_not>
+					<autogen>
+						__KeyOverlaidModifier__
+						PointingButton::BUTTON5,
+						KeyCode::VK_MODIFIER_EXTRA5,
+						PointingButton::MIDDLE
+					</autogen>
+				</block>
+				<block>
+					<modifier_not>ModifierFlag::EXTRA5</modifier_not>
+					<autogen>
+						__KeyOverlaidModifier__
+						PointingButton::BUTTON4, ModifierFlag::NONE,
+						KeyCode::VK_MODIFIER_EXTRA4,
+						KeyCode::VK_OPEN_URL_APP_Mission_Control
+					</autogen>
+				</block>
+
+				<autogen>
+					__PointingRelativeToScroll__
+					PointingButton::NONE, ModifierFlag::EXTRA5
+				</autogen>
+
+				<!-- forward/backward -->
+				<autogen>
+					__KeyToKey__
+					PointingButton::BUTTON4, ModifierFlag::EXTRA5,
+					KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L
+				</autogen>
+				<autogen>
+					__KeyToKey__
+					PointingButton::BUTTON5, ModifierFlag::EXTRA4,
+					KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L
+				</autogen>
+
+				<!-- switch tabs -->
+				<!-- because this is left-handed,
+				     RIGHT is the physical left button
+				     and LEFT is the physical right button -->
+				<autogen>
+					__KeyToKey__
+					PointingButton::RIGHT, ModifierFlag::EXTRA5,
+					KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L
+				</autogen>
+				<autogen>
+					__KeyToKey__
+					PointingButton::LEFT, ModifierFlag::EXTRA4,
+					KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L
+				</autogen>
+			</item>
+			<item>
+				<name>For Right-handed users</name>
+				<appendix>&#x2022; Press Left Secondary alone for middle click</appendix>
+				<appendix>&#x2022; Hold Left Secondary and move trackball for scrolling</appendix>
+				<appendix>&#x2022; Press Right Secondary alone for Mission Control</appendix>
+				<appendix>&#x2022; Left Secondary &#x2192; Right Secondary for Forward</appendix>
+				<appendix>&#x2022; Left Secondary &#x2190; Right Secondary for Backward</appendix>
+				<appendix>&#x2022; Left Secondary &#x2192; Right Primary for Next Tab</appendix>
+				<appendix>&#x2022; Left Primary &#x2190; Right Secondary for Previous Tab</appendix>
+				<identifier>private.MMEnhancedSecondariesRighty</identifier>
+				<block>
+					<modifier_not>ModifierFlag::EXTRA5</modifier_not>
+					<autogen>
+						__KeyOverlaidModifier__
+						PointingButton::BUTTON4, ModifierFlag::NONE,
+						KeyCode::VK_MODIFIER_EXTRA4,
+						PointingButton::MIDDLE
+					</autogen>
+				</block>
+				<block>
+					<modifier_not>ModifierFlag::EXTRA4</modifier_not>
+					<autogen>
+						__KeyOverlaidModifier__
+						PointingButton::BUTTON5,
+						KeyCode::VK_MODIFIER_EXTRA5,
+						KeyCode::VK_OPEN_URL_APP_Mission_Control
+					</autogen>
+				</block>
+
+				<autogen>
+					__PointingRelativeToScroll__
+					PointingButton::NONE, ModifierFlag::EXTRA4
+				</autogen>
+
+				<!-- forward/backward -->
+				<autogen>
+					__KeyToKey__
+					PointingButton::BUTTON4, ModifierFlag::EXTRA5,
+					KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L
+				</autogen>
+				<autogen>
+					__KeyToKey__
+					PointingButton::BUTTON5, ModifierFlag::EXTRA4,
+					KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L
+				</autogen>
+
+				<!-- switch tabs -->
+				<autogen>
+					__KeyToKey__
+					PointingButton::LEFT, ModifierFlag::EXTRA5,
+					KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L
+				</autogen>
+				<autogen>
+					__KeyToKey__
+					PointingButton::RIGHT, ModifierFlag::EXTRA4,
+					KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L
+				</autogen>
+			</item>
+		</item>
+		<item>
+			<name>Drag Lock</name>
+			<appendix>Press Left + Right buttons simultaneously to lock left button down</appendix>
+			<appendix>Press either left or right mouse button to unlock</appendix>
+			<identifier>private.BothButtonsDragLock</identifier>
+			<autogen>
+				__SimultaneousKeyPresses__
+				PointingButton::LEFT, PointingButton::RIGHT,
+				KeyCode::VK_MOUSEKEY_LOCK_BUTTON_LEFT
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				PointingButton::LEFT,
+				PointingButton::LEFT,
+
+				Option::KEYTOKEY_AFTER_KEYUP,
+				KeyCode::VK_MOUSEKEY_LOCK_BUTTON_ALL_FORCE_OFF
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				PointingButton::RIGHT,
+				PointingButton::RIGHT,
+
+				Option::KEYTOKEY_AFTER_KEYUP,
+				KeyCode::VK_MOUSEKEY_LOCK_BUTTON_ALL_FORCE_OFF
+			</autogen>
+		</item>
+		<item>
+			<name>Secondary buttons to middle button</name>
+			<appendix>Each of the two secondary buttons becomes a middle mouse button</appendix>
+			<identifier>private.SecondariesMiddleButton</identifier>
+			<autogen>
+				__KeyToKey__
+				PointingButton::BUTTON4,
+				PointingButton::MIDDLE
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				PointingButton::BUTTON5,
+				PointingButton::MIDDLE
+			</autogen>
+		</item>
+	</item>
+</root>

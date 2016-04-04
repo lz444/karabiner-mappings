@@ -36,5 +36,11 @@ more useful. Good for Leopold FC660 users.
 ###enhanced\_insert\_apps.xml
 Application hotkey definitions for use with enhanced\_insert.
 
+###marble\_mouse.xml
+For use with the Logitech Trackman Marble (also known as the Marble Mouse).
+A basic and cheap four button trackball, with 2 large primary buttons and 2
+small secondary buttons. Ambidexterous design means both left handed and
+right handed people can enjoy "power user" functionality.
+
 ###misc.xml
 Other mappings which don't fit anywhere else.
