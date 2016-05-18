@@ -17,6 +17,16 @@
 				KeyCode::F13, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT
 			</autogen>
 		</item>
+		<item>
+			<name>Forbid Clear/NumLock</name>
+			<appendix>For Leopold FC210TP which generates extra NumLock presses</appendix>
+			<appendix>when its own internal NumLock is on.</appendix>
+			<identifier>private.ForbidClear</identifier>
+			<autogen>
+				__DropKeyAfterRemap__
+				KeyCode::KEYPAD_CLEAR,
+			</autogen>
+		</item>
 		<!-- These must appear first for Option + Shift to take precedence -->
 		<item>
 			<name>Option + Keypad Dot, 0-6 for Hexadecimal entry</name>

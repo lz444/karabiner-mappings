@@ -93,6 +93,54 @@
 			</autogen>
 		</item>
 		<item>
+			<name>Insert to Left Control</name>
+			<appendix>For FC660 + external numpad.</appendix>
+			<appendix>Use with Enhanced Numeric keypad script.</appendix>
+			<item>
+				<name>Insert to Left Control Only</name>
+				<identifier>private.InsertLCtrl</identifier>
+				<autogen>
+					__KeyToKey__
+					KeyCode::HELP,
+					KeyCode::CONTROL_L
+				</autogen>
+			</item>
+			<item>
+				<name>Insert to Backquote/Left Control</name>
+				<appendix>Press &amp; release insert for backquote ( ` ), hold for Left Control</appendix>
+				<appendix>Shift + Insert for tilde ( ~ )</appendix>
+				<identifier>private.InsertLCtrlBackquote</identifier>
+				<autogen>
+					__KeyToKey__
+					KeyCode::HELP, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
+					KeyCode::BACKQUOTE, ModifierFlag::SHIFT_R
+				</autogen>
+				<autogen>
+					__KeyOverlaidModifier__
+					KeyCode::HELP,
+					KeyCode::CONTROL_L,
+					KeyCode::BACKQUOTE
+				</autogen>
+			</item>
+			<item>
+				<name>Insert to Tilde/Left Control</name>
+				<appendix>Press &amp; release insert for tilde ( ~ ), hold for Left Control</appendix>
+				<appendix>Shift + Insert for backquote ( ` )</appendix>
+				<identifier>private.InsertLCtrlTilde</identifier>
+				<autogen>
+					__KeyToKey__
+					KeyCode::HELP, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
+					KeyCode::BACKQUOTE
+				</autogen>
+				<autogen>
+					__KeyOverlaidModifier__
+					KeyCode::HELP,
+					KeyCode::CONTROL_L,
+					KeyCode::BACKQUOTE, ModifierFlag::SHIFT_R
+				</autogen>
+			</item>
+		</item>
+		<item>
 			<name>Hotkeys for use with EXTRA6 / Enhanced Insert</name>
 			<item>
 				<name>Insert + Delete (Forward Delete) for Insert</name>
